@@ -1,7 +1,9 @@
-# InstagramLive-PHP [![Discord](https://img.shields.io/discord/476526599232159780.svg?style=for-the-badge)](https://discord.gg/EpkKFt3)
+# InstagramLive-PHP 
 A PHP script that allows for you to go live on Instagram with any streaming program that supports RTMP!
 
 Built with [mgp25's amazing Instagram Private API Wrapper for PHP](https://github.com/mgp25/Instagram-API/).
+But this API is now private. So we will use the last avaliable copy on [adrifkat's repository](https://github.com/adrifkat/instagram-api).
+
 # Note
 Please read this **entire** document as it has *very* important information about the script. If you create an issue that can be solved by reading this document, it will be ignored.
 
@@ -10,15 +12,18 @@ If you are running this after the first setup, work from step six on...
 
 Also, if you are updating this script from an old version, please delete your old script and re-follow all these instructions.
 
-1. Install PHP, of course...
-2. [Install Composer](https://getcomposer.org/download/)
+1. Install PHP. [Download for Windows](https://windows.php.net/download/)
+2. [Install the lastest Composer version](https://getcomposer.org/download/#composer-history-caption)
 3. Clone the Repository
 4. Run ```composer install``` in the cloned folder
-5. Edit the Username and Password inside of `config.php` to your Instagram details
+5. Edit the Username and Password inside of `config.php` to your Instagram details 
+   Change the second argument (USERNAME and PASS) of define function. Do NOT change "IG_USERNAME" or "IG_PASS".
 6. Run the `goLive.php` script. (`php goLive.php`)
-7. Copy you Stream-URL and Stream-Key and paste them into your streaming software. [See OBS-Setup](https://github.com/JRoy/InstagramLive-PHP#obs-setup)
+7. Copy you Stream-URL and Stream-Key and paste them into your streaming software.
+
 #### Video Tutorial
-If you'd like a video version of this tutorial, see [this video](https://www.youtube.com/watch?v=mZfzFNZSuQc).
+Cpming soon.
+
 # OBS-Setup
 1. Set your OBS canvas size to 720x1280. This can be done by going to Settings->Video and editing Base Canvas Resolution to "720x1280".
 2. Go to the "Stream" section of your OBS Settings 
@@ -33,7 +38,7 @@ To view comments and likes as you are streaming, you'll need a Windows machine a
 
 Linux/Mac support is planned for a future release.
 # Commands
-InstagramLive-PHP has a plenty of commands to aid in live streaming. To view them, along with which commands work on what operating system, [visit the wiki by clicking here](https://github.com/JRoy/InstagramLive-PHP/wiki/Commands) to view the table of commands and their descriptions. 
+Type "help" to see the commands that you can use during the live stream. 
 # FAQ
 #### OBS gives a "Failed to connect" error
 This is mostly due to an invalid stream key: The stream key changes **every** time you start a new stream so it must be replaced in OBS every time.
@@ -44,18 +49,8 @@ This is usually due to archiving a stream that had no content (video). Just dele
 #### I archived my live stream but I don't see it inside of Instagram
 This is can be caused by 1 of 2 reasons:
 * You did not stream anything. Please make sure you actually send a video to the stream url or the archive may fail to load.
-* You did not change your stream content/canvas size. If you are using OBS, you can address this by following step one in [OBS Setup Section](https://github.com/JRoy/InstagramLive-PHP#obs-setup).
+* You did not change your stream content/canvas size. If you are using OBS, you can address this by following step one in OBS Setup Section.
 #### I get "CURL Error 60: SSL certificate problem" when trying to log into Instagram
 This is due to CURL not having a valid CA. You can find a solution here: [https://stackoverflow.com/a/34883260](https://stackoverflow.com/a/34883260).
 #### I get "CURL Error 28: Operation timed out after x milliseconds with 0 bytes received."
 This means Instagram is refusing to connect to your proxy/computer. This could be for a wide verity of different reasons. I cannot help you when this if this happens, it's out of my control and there is nothing you can do to fix this other than changing your IP Address or actual computer you are using. Additionally, a proxy or VPN could create this issue.
-### Question not listed here?
-If your question is not listed here, [join our discord](https://discord.gg/EpkKFt3) so I can help support you faster. [https://discord.gg/EpkKFt3](https://discord.gg/EpkKFt3)
-# Donate
-If you would like to donate to me because you find what I do useful and would like to support me, you can do so through this methods:
-
-Patreon: https://www.patreon.com/JRoy
-
-PayPal.me: https://www.paypal.me/JoshuaRoy1
-
-Bitcoin: `32J2AqJBDY1VLq6wfZcLrTYS8fCcHHVDKD`
