@@ -5,6 +5,7 @@ Built with [mgp25's amazing Instagram Private API Wrapper for PHP](https://githu
 But this API is now private. So we will use the last avaliable copy on [adrifkat's repository](https://github.com/adrifkat/instagram-api).
 
 # Note
+Tested in Windows 10.
 Please read this **entire** document as it has *very* important information about the script. If you create an issue that can be solved by reading this document, it will be ignored.
 
 # Setup
@@ -17,7 +18,7 @@ Also, if you are updating this script from an old version, please delete your ol
 3. Clone the Repository
 4. Run ```composer install``` in the cloned folder
 5. Edit the Username and Password inside of `config.php` to your Instagram details 
-   Change the second argument (USERNAME and PASS) of define function. Do NOT change "IG_USERNAME" or "IG_PASS".
+   Change the second argument (USERNAME and PASSWORD) of define function. Do NOT change "IG_USERNAME" or "IG_PASS".
 6. Run the `goLive.php` script. (`php goLive.php`)
 7. Copy you Stream-URL and Stream-Key and paste them into your streaming software.
 
